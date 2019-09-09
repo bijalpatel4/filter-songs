@@ -21,7 +21,7 @@ const Input = props => {
           id="button-addon1"
           onClick={props.clicked}
         >
-          <i class="fa fa-search p-2" aria-hidden="true"></i>
+          <i className="fa fa-search p-2" aria-hidden="true"></i>
         </button>
       </div>
     </div>

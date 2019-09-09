@@ -11,10 +11,11 @@ const Songs = props => {
           <th scope="col">Movie Name</th>
           <th scope="col">Language</th>
           <th scope="col">year</th>
+          <th scope="col">Delete</th>
         </tr>
       </thead>
       <tbody>
-        {props.songsList.songs.map(song => (
+        {props.songsList.map(song => (
           <tr key={song.id}>
             <th scope="row">{song.id}</th>
             <td>{song.song}</td>
@@ -22,6 +23,9 @@ const Songs = props => {
             <td>{song.movieName}</td>
             <td>{song.language}</td>
             <td>{song.year}</td>
+            <td>
+              <button onClick={() => props.onDelete(song)}>Delete</button>
+            </td>
           </tr>
         ))}
       </tbody>
